@@ -11,12 +11,17 @@
 
 
 class Hand {
+private:
     std::vector<Tile> hand;
+    int tiles[34]{};
+public:
     Hand(std::vector<Tile> hand);
     bool addTile(const Tile& tile); // return true for successful
     bool removeTile(const Tile& tile); // return true for successful, false for failure
+    const std::vector<Tile> getHand() const;
     bool isValid();
     bool isTenpai();
+    void sort_tiles();
 };
 
 

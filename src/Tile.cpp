@@ -7,6 +7,15 @@
 Tile::Tile(Suit suit, int value) {
     this->suit = suit;
     this->value = value;
+    if(this->suit == Suit::Man){
+        this->index = this->value-1;
+    } else if(this->suit == Suit::Pin){
+        this->index = this->value+8;
+    } else if(this->suit == Suit::Sou){
+        this->index= this->value+17;
+    } else{
+        this->index = this->value+26;
+    }
 }
 
 Suit Tile::getSuit() const {
@@ -38,6 +47,14 @@ bool Tile::isSimple() const {
     return true;
 }
 
+int Tile::getIndex() const {
+    return this->index;
+}
+
 bool Tile::operator==(const Tile &other) const {
     return this->suit == other.getSuit() && this->value == other.getValue();
+}
+
+bool Tile::operator<(const Tile &other) const {
+    return this->index < other.index;
 }
