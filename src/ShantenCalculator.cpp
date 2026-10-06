@@ -1,11 +1,61 @@
 //
 // Created by benad on 9/23/2026.
 //
-#include <unordered_map>
 #include "ShantenCalculator.h"
 
 int ShantenCalculator::calculate_standard(const Hand &hand) const {
+    Hand temp_hand = hand;
+    temp_hand.sort_tiles();
+    int shanten = 8;
+
 }
+
+
+int ShantenCalculator::dfs_shanten(Hand hand, int melds, int taatsu, int pairs) {
+    hand.sort_tiles();
+    int best = 8;
+    std::vector<Tile> hand_vec = hand.getHand();
+    if(hand_vec.empty()){
+        return standard_shanten(melds,taatsu,pairs);
+    }
+    Tile first = hand_vec[0];
+    Hand hand_2 = hand;
+    if(hand_vec.size() >= 3 && hand_vec[1].getSuit() == first.getSuit() && hand_vec[2].getSuit() == first.getSuit()){ // recursive case of sequence OR triplet existing
+        if((hand_vec[1].getValue() == first.getValue()+1 && hand_vec[2].getValue() == first.getValue()+2)
+            || (hand_vec[1] == first && hand_vec[2] == first)){
+            hand_2.removeTile(hand_vec[0]);
+            hand_2.removeTile(hand_vec[1]);
+            hand_2.removeTile(hand_vec[2]);
+            best = std::min(best,this->dfs_shanten(hand_2,melds+1,taatsu,pairs));
+            hand_2 = hand;
+        }
+    }
+    if(hand_vec.size() >= 2 && hand_vec[1] == first){ // recursive case of pair existing
+        hand_2.removeTile(hand_vec[0]);
+        hand_2.removeTile(hand_vec[1]);
+        best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu,pairs+1));
+        hand_2 = hand;
+    }
+    if(hand_vec.size() >= 2 && hand_vec[1].getSuit() == first.getSuit() && (hand_vec[1].getValue() == first.getValue()+1 || hand_vec[1].getValue() == first.getValue()+2)){ // taatsu case, incomplete sequence
+        hand_2.removeTile(hand_vec[0]);
+        hand_2.removeTile(hand_vec[1]);
+        best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu+1,pairs));
+        hand_2 = hand;
+    }
+    if(hand_vec.size() >= 3)
+    hand_2.removeTile(first); // final case that always executes of simply not using the first tile in anything
+    best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu+1,pairs));
+    return best;
+}
+
+int ShantenCalculator::standard_shanten(int melds, int taatsu, int pairs) {
+    int shanten = 8 - (2*melds)-std::min(taatsu+pairs,4-melds);
+    if(pairs >= 1 && (melds+taatsu+pairs) >= 5){
+        shanten--;
+    }
+    return shanten;
+}
+
 
 
 int ShantenCalculator::calculate_chiitoitsu(const Hand &hand) const {
