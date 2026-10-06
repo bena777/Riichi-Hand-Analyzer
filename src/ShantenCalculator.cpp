@@ -36,15 +36,21 @@ int ShantenCalculator::dfs_shanten(Hand hand, int melds, int taatsu, int pairs) 
         best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu,pairs+1));
         hand_2 = hand;
     }
-    if(hand_vec.size() >= 2 && hand_vec[1].getSuit() == first.getSuit() && (hand_vec[1].getValue() == first.getValue()+1 || hand_vec[1].getValue() == first.getValue()+2)){ // taatsu case, incomplete sequence
+    if(hand_vec.size() >= 2 && hand_vec[1].getSuit() == first.getSuit() && hand_vec[1].getValue() == first.getValue()+1){ // taatsu case, incomplete sequence (1-2), no gap
         hand_2.removeTile(hand_vec[0]);
         hand_2.removeTile(hand_vec[1]);
         best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu+1,pairs));
         hand_2 = hand;
     }
-    if(hand_vec.size() >= 3)
+    // taatsu case with gap, "skipping" over middle tile
+    if (hand_vec.size() >= 3 && hand_vec[1].getSuit() == first.getSuit() && hand_vec[2].getSuit() == first.getSuit() && hand_vec[2].getValue() == first.getValue() + 2) {
+        hand_2.removeTile(hand_vec[0]);
+        hand_2.removeTile(hand_vec[2]);
+        best = std::min(best,dfs_shanten(hand_2, melds, taatsu + 1, pairs));
+        hand_2 = hand;
+    }
     hand_2.removeTile(first); // final case that always executes of simply not using the first tile in anything
-    best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu+1,pairs));
+    best = std::min(best,this->dfs_shanten(hand_2,melds,taatsu,pairs));
     return best;
 }
 

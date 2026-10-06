@@ -1,0 +1,14 @@
+# ninja log v5
+20	284	8130326790623968	CMakeFiles/mahjong_tests.dir/src/Tile.cpp.obj	c2d735ae9bf5d2cf
+31	704	8130326794854727	CMakeFiles/mahjong_tests.dir/src/ShantenCalculator.cpp.obj	8f057ef282f8879
+11	731	8130326795125678	CMakeFiles/mahjong_tests.dir/src/Hand.cpp.obj	9e175215276dd8f2
+57	1622	8130326804050884	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	69f541ee35171f7c
+69	7838	8130326866131478	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	f63f8b0a9bbe5c21
+22	435	8130328293048519	CMakeFiles/mahjong_tests.dir/src/ShantenCalculator.cpp.obj	8f057ef282f8879
+5	449	8130328293208508	CMakeFiles/mahjong_tests.dir/src/Hand.cpp.obj	9e175215276dd8f2
+14	1267	8130328301387517	CMakeFiles/mahjong_tests.dir/tests/ShantenCalculatorTest.cpp.obj	d6b7751599f5d414
+30	1884	8130328307544722	lib/libgtest.a	63a5c2e2229af7e
+1884	1982	8130328308549953	lib/libgtest_main.a	5007ecc93beb1c6e
+1982	4804	8130328336748841	mahjong_tests.exe	9afbe6d7836cdff3
+1982	4804	8130328336748841	mahjong_tests[1]_tests.cmake	9afbe6d7836cdff3
+1982	4804	8130328336748841	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/mahjong_tests[1]_tests.cmake	9afbe6d7836cdff3

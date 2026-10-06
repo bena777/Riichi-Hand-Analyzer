@@ -5,6 +5,9 @@
 #include "Hand.h"
 #include <algorithm>
 
+
+Hand::Hand() = default;
+
 Hand::Hand(std::vector<Tile> hand) {
     this->hand = hand;
 }

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/mahjong_tests[1]_tests.cmake")
+  include("C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/mahjong_tests[1]_tests.cmake")
+else()
+  add_test(mahjong_tests_NOT_BUILT mahjong_tests_NOT_BUILT)
+endif()

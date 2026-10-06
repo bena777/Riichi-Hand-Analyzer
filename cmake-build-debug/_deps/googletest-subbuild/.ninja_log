@@ -1,0 +1,21 @@
+# ninja log v5
+1	80	8130326570294296	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4896925af9b8df53
+1	80	8130326570294296	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4896925af9b8df53
+81	4474	8130326614237513	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	13e1d9df7c97cd8d
+81	4474	8130326614237513	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	13e1d9df7c97cd8d
+4475	4657	0	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	1e961947ed777942
+4475	4657	0	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	1e961947ed777942
+4658	4747	8130326616963735	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	c1263127ca93444f
+4658	4747	8130326616963735	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	c1263127ca93444f
+4747	4823	8130326617708914	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	ed28dfc2e7dcb91e
+4747	4823	8130326617708914	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	ed28dfc2e7dcb91e
+4823	4894	8130326618439478	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	fcd30d7c7ee84320
+4823	4894	8130326618439478	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	fcd30d7c7ee84320
+4895	4973	8130326619219516	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	1f2db82b4fcecac0
+4895	4973	8130326619219516	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	1f2db82b4fcecac0
+4973	5049	8130326619990321	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	9ee7c8b9fd8fab73
+4973	5049	8130326619990321	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	9ee7c8b9fd8fab73
+5050	5146	8130326620955487	CMakeFiles/googletest-populate-complete	32985a8d5f614241
+5050	5146	8130326620955487	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	32985a8d5f614241
+5050	5146	8130326620955487	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	32985a8d5f614241
+5050	5146	8130326620955487	C:/Users/benad/CLionProjects/mahjong/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	32985a8d5f614241
